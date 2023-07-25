@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega32</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>main</AssemblyName>
+    <Name>main</Name>
+    <RootNamespace>main</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <avrtoolserialnumber />
+    <avrdeviceexpectedsignature>0x1E9502</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>
+        </InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber>
+      </ToolNumber>
+      <ToolName>Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
+    <avrtoolinterface />
+    <custom>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>
+        </InterfaceName>
+      </ToolOptions>
+      <ToolType xmlns="">custom</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Custom Programming Tool</ToolName>
+    </custom>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+      <Value>../UTIL/FreeRTOSTest/OS/includes</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+    </ListValues>
+  </avrgcc.assembler.general.IncludePaths>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="APP\App.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\App.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Buzzer\Buzzer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Buzzer\Buzzer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Dc_Motor\DC_Motor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Dc_Motor\DC_Motor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EEPROM\EEPROM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EEPROM\EEPROM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EEPROM\EEPROM_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EEPROM\EEPROM_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EEPROM\Testapp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\IR_Sensor\IR.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\IR_Sensor\IR.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\IR_Sensor\Line.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KeyPad\KeyPad.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KeyPad\KeyPad.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KeyPad\TestApp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\TestApp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Servo\Servo.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Servo\Servo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Servo\Testapp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SevenSEG\SevenSEG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SevenSEG\SevenSEG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED\LED.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED\LED.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\PushButton\PushButton.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\PushButton\PushButton.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SevenSEG\TestApp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_reg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\TestApp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\TestApp2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO_REG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\EXT_INT\EXT_INT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\EXT_INT\EXT_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\EXT_INT\EXT_INT_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\EXT_INT\EXT_INT_reg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\EXT_INT\EXT_INT_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\EXT_INT\TestApp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Global_INT\Global_INT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Global_INT\Global_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Global_INT\Global_INT_Reg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Global_INT\Global_INT_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\SPI\SPI.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\SPI\SPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\SPI\SPI_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\SPI\SPI_Reg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\SPI\SPI_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\SPI\TestAPP.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\SPI\TestApp_Slave.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer0\TestApp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer0\TestPWM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer0\Timer0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer0\Timer0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer0\Timer0_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer0\Timer0_Reg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer0\Timer0_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer1\Timer1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer1\Timer1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer1\Timer1_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer1\Timer1_Reg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer1\Timer1_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TWI\TestApp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TWI\TWI.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TWI\TWI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TWI\TWI_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TWI\TWI_Reg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TWI\TWI_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\UART\TestApp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\UART\UART.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\UART\UART.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\UART\UART_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\UART\UART_Reg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\UART\UART_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\WatchdogTimer\WDT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\WatchdogTimer\WDT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\WatchdogTimer\WDT_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\WatchdogTimer\WDT_Reg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\WatchdogTimer\WDT_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\Algorithims\Algo.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\Algorithims\Algo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\BitMath.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\atomic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\croutine.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\deprecated_definitions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\event_groups.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\FreeRTOS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\FreeRTOSConfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\message_buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\mpu_prototypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\mpu_wrappers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\portable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\portmacro.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\projdefs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\queue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\semphr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\StackMacros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\stack_macros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\stream_buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\task.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\includes\timers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\src\croutine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\src\event_groups.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\src\heap_1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\src\list.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\src\port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\src\queue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\src\stream_buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\src\tasks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\OS\src\timers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\TestApp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\FreeRTOSTest\TestApp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\RTO\RTO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\RTO\RTO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\RTO\RTO_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\RTO\RTO_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\RTO\testapp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\Stack\Stack.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\Stack\Stack.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UTIL\STD_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HAL\LED" />
+    <Folder Include="HAL\LCD" />
+    <Folder Include="HAL\Buzzer" />
+    <Folder Include="HAL\IR_Sensor" />
+    <Folder Include="HAL\Dc_Motor" />
+    <Folder Include="HAL\KeyPad" />
+    <Folder Include="HAL\EEPROM" />
+    <Folder Include="HAL\Servo" />
+    <Folder Include="HAL\SevenSEG" />
+    <Folder Include="HAL\PushButton" />
+    <Folder Include="MCAL" />
+    <Folder Include="HAL" />
+    <Folder Include="APP" />
+    <Folder Include="MCAL\DIO" />
+    <Folder Include="MCAL\ADC" />
+    <Folder Include="MCAL\EXT_INT" />
+    <Folder Include="MCAL\Global_INT" />
+    <Folder Include="MCAL\TWI" />
+    <Folder Include="MCAL\SPI" />
+    <Folder Include="MCAL\UART" />
+    <Folder Include="MCAL\WatchdogTimer" />
+    <Folder Include="MCAL\Timer1" />
+    <Folder Include="MCAL\Timer0" />
+    <Folder Include="UTIL" />
+    <Folder Include="UTIL\Algorithims" />
+    <Folder Include="UTIL\FreeRTOSTest" />
+    <Folder Include="UTIL\FreeRTOSTest\OS\" />
+    <Folder Include="UTIL\FreeRTOSTest\OS\includes\" />
+    <Folder Include="UTIL\FreeRTOSTest\OS\src\" />
+    <Folder Include="UTIL\RTO" />
+    <Folder Include="UTIL\Stack" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
